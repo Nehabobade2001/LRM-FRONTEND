@@ -6,7 +6,9 @@ import { MatxLayoutSettings } from "app/components/MatxLayout/settings";
 export const SettingsContext = createContext({
   settings: MatxLayoutSettings,
   updateSettings: () => {}
-});
+})
+
+
 
 export default function SettingsProvider({ settings, children }) {
   const [currentSettings, setCurrentSettings] = useState(settings || MatxLayoutSettings);

@@ -1,7 +1,7 @@
 import { Stack, Typography } from "@mui/material";
 import { Box, styled } from "@mui/material";
 import { Breadcrumb, SimpleCard } from "app/components";
-import SimpleForm from "./SimpleForm";
+import SimpleFormupdate from "./SimpleFormupdate";
 import StepperForm from "./StepperForm";
 
 // STYLED COMPONENTS
@@ -14,14 +14,9 @@ const Container = styled("div")(({ theme }) => ({
   },
 }));
 
-export default function AppForm() {
+export default function Aupdate() {
   return (
     <Container>
-      
-      {/* <Box className="breadcrumb">
-        <Breadcrumb routeSegments={[{ name: "Material", path: "/material" }, { name: "Form" }]} />
-      </Box> */}
-
       <Stack spacing={3}>
         <SimpleCard>
           <Typography
@@ -29,16 +24,16 @@ export default function AppForm() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize:"20px",
-              fontWeight:"bold"
+              fontSize: "20px",
+              fontWeight: "bold",
             }}
           >
             Document Upload
           </Typography>
-          <SimpleForm />
+          <SimpleFormupdate />
         </SimpleCard>
 
-        <SimpleCard title="stepper form">{/* <StepperForm /> */}</SimpleCard>
+        <SimpleCard title="stepper form"></SimpleCard>
       </Stack>
     </Container>
   );

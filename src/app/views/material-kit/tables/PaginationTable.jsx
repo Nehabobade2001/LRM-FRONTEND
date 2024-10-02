@@ -171,8 +171,10 @@ import {
   TablePagination,
   InputBase,
   alpha,
+  Button,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
 
 
 
@@ -268,6 +270,7 @@ export default function PaginationTable() {
   };
 
   const filteredList = subscribarList.filter(
+    
     (subscriber) =>
       subscriber.name.toLowerCase().includes(searchText) ||
       subscriber.company.toLowerCase().includes(searchText) ||
@@ -284,6 +287,8 @@ export default function PaginationTable() {
     setPage(0);
   };
 
+
+
   return (
     <>
       <Search>
@@ -299,16 +304,18 @@ export default function PaginationTable() {
       </Search>
       <Box width="100%" overflow="auto">
         <StyledTable>
+
           <TableHead>
             <TableRow>
               <TableCell align="left">Farmer Name</TableCell>
-              <TableCell align="center">Company</TableCell>
-              <TableCell align="center">Date</TableCell>
-              <TableCell align="center">Status</TableCell>
+              <TableCell align="center">Khasra Number</TableCell>
+              <TableCell align="center">Plot Number</TableCell>
+              <TableCell align="center">Date of Registration</TableCell>
               <TableCell align="center">Amount</TableCell>
               <TableCell align="right">Action</TableCell>
             </TableRow>
           </TableHead>
+          
           <TableBody>
             {filteredList
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
@@ -320,9 +327,12 @@ export default function PaginationTable() {
                   <TableCell align="center">{subscriber.status}</TableCell>
                   <TableCell align="center">${subscriber.amount}</TableCell>
                   <TableCell align="right">
-                    <IconButton>
+                    {/* <IconButton>
                       <Icon color="error">close</Icon>
-                    </IconButton>
+                    </IconButton> */}
+                    <Button>
+                      <Link className="bg-green-600">Action</Link>
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))}

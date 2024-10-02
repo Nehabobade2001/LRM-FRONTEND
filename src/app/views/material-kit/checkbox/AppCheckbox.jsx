@@ -4,6 +4,7 @@ import { Breadcrumb, SimpleCard } from "app/components";
 // import LabelledCheckbox from "./LabelledCheckbox";
 // import FormGroupCheckbox from "./FormGroupCheckbox";
 // import PlacingCheckboxLabel from "./PlacingCheckboxLabel";
+import FormGroupCheckbox from './FormGroupCheckbox'
 
 
 const Container = styled("div")(({ theme }) => ({
@@ -22,7 +23,7 @@ export default function AppCheckbox() {
         {/* <Breadcrumb
           routeSegments={[{ name: "Material", path: "/material" }, { name: "Chckbox" }]}/> */}
       </Box>
-
+      <FormGroupCheckbox/>
       {/* <SimpleCard title="simple checkbox">
         <SimpleCheckbox />
       </SimpleCard>
