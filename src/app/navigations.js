@@ -19,7 +19,7 @@ export const navigations = [
     children: [
       // { name: "Auto Complete", path: "/material/autocomplete", iconText: "A" },
       // { name: "Buttons", path: "/material/buttons", iconText: "B" },
-       { name: "Checkbox", path: "/material/checkbox", iconText: "C" },
+       { name: "view doc", path: "/material/checkbox", iconText: "C" },
       // { name: "Dialog", path: "/material/dialog", iconText: "D" },
       //  { name: "Expansion Panel", path: "/material/expansion-panel", iconText: "E" },
 

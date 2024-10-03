@@ -12,7 +12,7 @@ const AppForm = Loadable(lazy(() => import("./forms/AppForm")));
 // const AppSlider = Loadable(lazy(() => import("./slider/AppSlider")));
 // const AppDialog = Loadable(lazy(() => import("./dialog/AppDialog")));
 // const AppButton = Loadable(lazy(() => import("./buttons/AppButton")));
- const AppCheckbox = Loadable(lazy(() => import("./checkbox/AppCheckbox")));
+ const AppCheckbox = Loadable(lazy(() => import("./viewdoc/AppCheckbox")));
 // const AppSnackbar = Loadable(lazy(() => import("./snackbar/AppSnackbar")));
 // const AppAutoComplete = Loadable(lazy(() => import("./auto-complete/AppAutoComplete")));
  const AppExpansionPanel = Loadable(lazy(() => import("./expansion-panel/AppExpansionPanel")));
