@@ -14,10 +14,12 @@ import { DatePicker } from "@mui/lab";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+import { useNavigate } from "react-router-dom"; 
 
-const SimpleFormupdate= () => {
+const UpdateFrom = () => {
   const [state, setState] = useState({ date: new Date() });
   const [selectedFiles, setSelectedFiles] = useState([]);
+  const navigate = useNavigate(); 
 
   const handleFileChange = (e) => {
     setSelectedFiles(e.target.files);
@@ -30,6 +32,10 @@ const SimpleFormupdate= () => {
       formData.append("documents", selectedFiles[i]);
     }
     console.log(selectedFiles);
+
+    setTimeout(() => {
+      navigate("/material/table"); 
+    }, 500); 
   };
 
   useEffect(() => {
@@ -210,23 +216,41 @@ const SimpleFormupdate= () => {
           sx={{ mt: 2 }}
         />
 
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          fullWidth
-          sx={{
-            py: 1.5,
-            fontSize: "16px",
-            bgcolor: "primary.main",
-            "&:hover": { bgcolor: "primary.dark" },
-          }}
-        >
-          Submit
-        </Button>
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6}>
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              fullWidth
+              sx={{
+                py: 1.5,
+                fontSize: "16px",
+                bgcolor: "primary.main",
+                "&:hover": { bgcolor: "primary.dark" },
+              }}
+            >
+              Submit
+            </Button>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Button
+              type="reset"
+              variant="outlined"
+              color="secondary"
+              fullWidth
+              sx={{
+                py: 1.5,
+                fontSize: "16px",
+              }}
+            >
+              Reset
+            </Button>
+          </Grid>
+        </Grid>
       </ValidatorForm>
     </Box>
   );
 };
 
-export default SimpleFormupdate
+export default UpdateFrom
