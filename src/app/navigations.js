@@ -20,8 +20,8 @@ export const navigations = [
       // { name: "Auto Complete", path: "/material/autocomplete", iconText: "A" },
       // { name: "Buttons", path: "/material/buttons", iconText: "B" },
        { name: "view doc", path: "/material/checkbox", iconText: "C" },
-      // { name: "Dialog", path: "/material/dialog", iconText: "D" },
-      //  { name: "Expansion Panel", path: "/material/expansion-panel", iconText: "E" },
+       { name: "Data Security", path: "/material/data", iconText: "D" },
+       { name: "System Notifications", path: "/material/notice", iconText: "N" },
 
       { name: " Upload Doc", path: "/material/form", iconText: "F" },
       // { name: "Switch", path: "/material/switch", iconText: "S" },
